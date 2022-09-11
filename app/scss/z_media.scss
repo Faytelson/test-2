@@ -1,0 +1,25 @@
+@media screen and (min-width: 576px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .menu {
+        &__nav {
+            display: block;
+        }
+        &__burger {
+            display: none;
+        }
+        &__m-btn {
+            margin-right: 40px;
+        }
+    }
+    .container {
+        width: 90%;
+    }
+    .header__body {
+        padding: 20px 0 10px;
+    }
+}

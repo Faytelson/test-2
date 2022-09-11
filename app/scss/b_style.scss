@@ -1,0 +1,113 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    &.locked {
+        overflow: hidden;
+        height: 100vh;
+        position: fixed;
+    }
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+.header {
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.07);
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.header__body {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.menu {
+    &__nav {
+        display: none;
+    }
+    &__nav-list {
+        display: flex;
+    }
+    &__nav-link {
+        font-size: 16px;
+    }
+    &__m-btn {
+        margin-right: 25px;
+    }
+    &__nav-item {
+        margin-right: 48px;
+    }
+}
+
+
+
+.m-btn {
+    background-color: transparent;
+    // padding: 12px 28px;
+    // font-size: 18px;
+    height: 49px;
+    padding: 8px 24px;
+    width: auto;
+    border: 1.5px solid #00BB78;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    color: #00BB78;
+}
+.nav-link {
+    font-weight: 400;
+    line-height: 138%;
+    text-transform: uppercase;
+    color: #0E0E0F;
+}
+.nav-item.active {
+    & .nav-link {
+        color: #00A76B;
+    }
+}
+
+.slider {
+    &__img {
+        width: 100%;
+    }
+    &__pagination {
+        position: static;
+        padding: 20px 0;
+    }
+}
+
+.swiper-pagination-bullet {
+    width: 24px;
+    height: 24px;
+    opacity: 1;
+    position: relative;
+    background-color: transparent;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: #E2E3E5;
+        border-radius: 50%;
+    }
+    &-active {
+        border: 1px solid #00A76B;
+        border-radius: 50%;
+        &::before {
+            background-color: #00A76B;
+        }
+    }
+}
