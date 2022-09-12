@@ -3,7 +3,7 @@ body {
     &.locked {
         overflow: hidden;
         height: 100vh;
-        position: fixed;
+        // position: fixed;
     }
 }
 .container {
@@ -51,9 +51,7 @@ body {
 
 .m-btn {
     background-color: transparent;
-    // padding: 12px 28px;
-    // font-size: 18px;
-    height: 49px;
+    min-width: 142px;
     padding: 8px 24px;
     width: auto;
     border: 1.5px solid #00BB78;
@@ -63,6 +61,11 @@ body {
     line-height: 140%;
     text-align: center;
     color: #00BB78;
+    cursor: pointer;
+    &:disabled {
+        border: 1.5px solid #ddd;
+        color: #ddd;
+    }
 }
 .nav-link {
     font-weight: 400;
@@ -79,6 +82,9 @@ body {
 .slider {
     &__img {
         width: 100%;
+    }
+    &__img_576 {
+        display: none;
     }
     &__pagination {
         position: static;
@@ -109,5 +115,41 @@ body {
         &::before {
             background-color: #00A76B;
         }
+    }
+}
+
+.page-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 140%;
+    color: #18191F;
+}
+
+.info-block {
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+        color: #FFFFFF;
+        margin-bottom: 24px;
+    }
+    &__list-item {
+        margin-bottom: 14px;
+    }
+    &__link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: #FFFFFF;
+    }
+    &__link_mod {
+        font-size: 14px;
+    }
+    &__img {
+        width: 108px;
+        height: 154px;
+        background: #009B63;
+        border-radius: 16px;
     }
 }
