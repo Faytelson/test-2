@@ -53,7 +53,21 @@
                 };
             })
             .catch(error => console.log(error));
-            // this.removeEventListener('click', loadCards);
             this.disabled = true;
     })
+})();
+
+(function() {
+    const dropdownBtns = document.querySelectorAll('.info-block__dropdown-btn'),
+        dropdownContents = document.querySelectorAll('.info-block__dropdown-content');
+
+        for(let btn of dropdownBtns) {
+            btn.addEventListener('click', function() {
+                for (let cont of dropdownContents) {
+                    if(cont.dataset.target === this.dataset.open) {
+                            cont.classList.toggle('info-block__dropdown-content_active');
+                        }
+                    }
+                })
+        }
 })();
