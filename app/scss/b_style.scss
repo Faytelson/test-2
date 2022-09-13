@@ -200,3 +200,48 @@ body {
         margin-left: 10px;
     }
 }
+.user-data-form {
+    // max-width: 255px;
+    position: relative;
+    &__btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 12px;
+    }
+    &__input {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        min-height: 40px;
+        width: 100%;
+        font-size: 16px;
+        line-height: 171%;
+        color: #FFFFFF;
+        padding: 9px 12px;
+        &::placeholder {
+            font-size: 14px;
+            line-height: 171%;
+            color: #FFFFFF;
+        }
+        &:focus,
+        &:focus-visible {
+            box-shadow: 0 0 1px 1px #fff;
+        }
+    }
+}
+.socials {
+    &__item {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    &__link {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

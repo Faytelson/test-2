@@ -12,4 +12,11 @@
         padding-bottom: 20px;
         color: #fff;
     }
+    &__socials {
+        display: flex;
+        gap: 16px;
+    }
+    &__user-data-form {
+        margin-bottom: 50px;
+    }
 }
