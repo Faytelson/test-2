@@ -88,8 +88,22 @@ function watcher() {
     watch(pathIMG, images);
 }
 
+function buildCopy() {
+    return src([
+        'app/js/**/*.min.js',
+        'app/css/**/*.min.css',
+        'app/images/dest/**/*',
+        'app/**/*.html',
+        'app/json/**/*'
+    ], {
+        base: 'app'
+    })
+    .pipe(dest('dist'))
+}
+
 exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.styles = styles;
 exports.images = images;
 exports.default = parallel(scripts, images, styles, browsersync, watcher);
+exports.build = series(styles, scripts, images, buildCopy);
