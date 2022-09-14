@@ -29,7 +29,7 @@
                             <li class="menu__nav-item nav-item active">
                                 <a href="" class="menu__nav-link nav-link">Кейсы</a>
                             </li>
-                            <li class="menu__nav-item nav-item">
+                            <li class="menu__nav-item nav-item nav-item_spec">
                                 <a href="" class="menu__nav-link nav-link">Бизнесу</a>
                             </li>
                             <li class="menu__nav-item nav-item">
@@ -53,7 +53,7 @@
                                 <li class="burger__nav-item nav-item active">
                                     <a href="#" class="burger__nav-link nav-link">Кейсы</a>
                                 </li>
-                                <li class="burger__nav-item nav-item">
+                                <li class="burger__nav-item nav-item nav-item_spec">
                                     <a href="#" class="burger__nav-link nav-link">Бизнесу</a>
                                 </li>
                                 <li class="burger__nav-item nav-item">
@@ -71,37 +71,42 @@
     </section>
 
     <section class="main">
-        <div class="slider">
+        <div class="main__intro intro">
+            <div class="intro__main-title-container">
+                <div class="container">
+                    <h1 class="main-title intro__main-title">Lorem ipsum dolor sit<br> amet, <span class="main-title main-title_col">consectetur<br> adipiscing elit</span></h1>
+                </div>
+            </div>
             <div class="swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <div class="slider__img-wrapper">
-                        <img src="images/dest/slider_pic_1.jpg" alt="Коттедж" title="Коттедж" class="slider__img slider__img_576">
-                        <img src="images/dest/pic_5.jpg" alt="Коттедж" title="Коттедж" class="slider__img slider__img_320">
+                    <div class="swiper__img-wrapper">
+                        <img src="images/dest/slider_pic_1.jpg" alt="Коттедж" title="Коттедж" class="swiper__img swiper__img_576">
+                        <img src="images/dest/pic_5.jpg" alt="Коттедж" title="Коттедж" class="swiper__img swiper__img_320">
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="slider__img-wrapper">
-                        <img src="images/dest/slider_pic_2.jpg" alt="Коттедж" title="Коттедж" class="slider__img slider__img_576">
-                        <img src="images/dest/pic_2.jpg" alt="Коттедж" title="Коттедж" class="slider__img slider__img_320">
+                    <div class="swiper__img-wrapper">
+                        <img src="images/dest/slider_pic_2.jpg" alt="Коттедж" title="Коттедж" class="swiper__img swiper__img_576">
+                        <img src="images/dest/pic_2.jpg" alt="Коттедж" title="Коттедж" class="swiper__img swiper__img_320">
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="slider__img-wrapper">
-                        <img src="images/dest/slider_pic_3.jpg" alt="Коттедж" title="Коттедж" class="slider__img slider__img_576">
-                        <img src="images/dest/pic_3.jpg" alt="Коттедж" title="Коттедж" class="slider__img slider__img_320">
+                    <div class="swiper__img-wrapper">
+                        <img src="images/dest/slider_pic_3.jpg" alt="Коттедж" title="Коттедж" class="swiper__img swiper__img_576">
+                        <img src="images/dest/pic_3.jpg" alt="Коттедж" title="Коттедж" class="swiper__img swiper__img_320">
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="slider__img-wrapper">
-                        <img src="images/dest/slider_pic_4.jpg" alt="Коттедж" title="Коттедж" class="slider__img slider__img_576">
-                        <img src="images/dest/pic_4.jpg" alt="Коттедж" title="Коттедж" class="slider__img slider__img_320">
+                    <div class="swiper__img-wrapper">
+                        <img src="images/dest/slider_pic_4.jpg" alt="Коттедж" title="Коттедж" class="swiper__img swiper__img_576">
+                        <img src="images/dest/pic_4.jpg" alt="Коттедж" title="Коттедж" class="swiper__img swiper__img_320">
                     </div>
                   </div>
                   ...
                 </div>
 
-                <div class="swiper-pagination slider__pagination"></div>
+                <div class="swiper-pagination swiper__pagination"></div>
             </div>
         </div>
 
@@ -128,7 +133,7 @@
                             <div class="info-block__dropdown-btn" data-open="one">
                                 <div class="info-block__title">Для связи</div>
                                 <div class="info-block__dropdown-arrow">
-                                    <img src="images/dest/arrow-down.svg" alt="Стрелка вниз" title="Стрелка вниз">
+                                    <img src="images/dest/arrow-down.svg" alt="Стрелка вниз" title="Стрелка вниз" class="info-block__dropdown-arrow-img" data-open="one">
                                 </div>
                             </div>
                             <div class="info-block__dropdown-content" data-target="one">
@@ -151,7 +156,7 @@
                         <div class="info-block__dropdown-btn" data-open="two">
                             <div class="info-block__title">Компания</div>
                             <div class="info-block__dropdown-arrow">
-                                <img src="images/dest/arrow-down.svg" alt="Стрелка вниз" title="Стрелка вниз">
+                                <img src="images/dest/arrow-down.svg" alt="Стрелка вниз" title="Стрелка вниз" class="info-block__dropdown-arrow-img" data-open="two">
                             </div>
                         </div>
                         <div class="info-block__dropdown-content" data-target="two">
@@ -179,16 +184,16 @@
                             <div class="info-block__dropdown-btn" data-open="three">
                                 <div class="info-block__title">Документы</div>
                                 <div class="info-block__dropdown-arrow">
-                                    <img src="images/dest/arrow-down.svg" alt="Стрелка вниз" title="Стрелка вниз">
+                                    <img src="images/dest/arrow-down.svg" alt="Стрелка вниз" title="Стрелка вниз" class="info-block__dropdown-arrow-img" data-open="three">
                                 </div>
                             </div>
                             <div class="info-block__dropdown-content" data-target="three">
                                 <ul class="info-block__list">
                                     <li class="info-block__list-item">
-                                        <a href="#" class="info-block__link">Политика конфеденциальности</a>
+                                        <a href="#" class="info-block__link">Политика <br>конфеденциальности</a>
                                     </li>
                                     <li class="info-block__list-item">
-                                        <a href="#" class="info-block__link">Пользовательское соглашение</a>
+                                        <a href="#" class="info-block__link">Пользовательское <br>соглашение</a>
                                     </li>
                                 </ul>
                             </div>
@@ -200,16 +205,16 @@
                             <div class="info-block__dropdown-btn" data-open="four">
                                 <div class="info-block__title">Будьте в курсе</div>
                                 <div class="info-block__dropdown-arrow">
-                                    <img src="images/dest/arrow-down.svg" alt="Стрелка вниз" title="Стрелка вниз">
+                                    <img src="images/dest/arrow-down.svg" alt="Стрелка вниз" title="Стрелка вниз" class="info-block__dropdown-arrow-img" data-open="four">
                                 </div>
                             </div>
                             <div class="info-block__dropdown-content" data-target="four">
                                 <div class="user-data-form">
                                     <form action="" name="mailList" class="footer__user-data-form user-data-form__form-field">
-                                        <input type="email" class="user-data-form__input" name="userEmail" placeholder="E ‒ mail">
-                                        <div class="user-data-form__btn">
+                                        <input type="email" class="user-data-form__input" name="userEmail" placeholder="E ‒ mail" required>
+                                        <button class="user-data-form__btn">
                                             <img src="images/dest/send-form-btn.svg" alt="Отправить" title="Отправить">
-                                        </div>
+                                        </button>
                                     </form>
                                 </div>
                                 <ul class="socials footer__socials">

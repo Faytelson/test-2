@@ -1,10 +1,14 @@
 body {
     font-family: 'Open Sans', sans-serif;
+    cursor: url('../images/dest/cursor.svg'), auto;
     &.locked {
         overflow: hidden;
         height: 100vh;
-        // position: fixed;
     }
+}
+button,
+a {
+    cursor: url('../images/dest/cursor.svg'), pointer;
 }
 .container {
     width: 100%;
@@ -54,14 +58,19 @@ body {
     min-width: 142px;
     padding: 8px 24px;
     width: auto;
-    border: 1.5px solid #00BB78;
+    border: 1.5px solid #0E0E0F;
     border-radius: 30px;
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
     text-align: center;
-    color: #00BB78;
-    cursor: pointer;
+    color: #0E0E0F;
+    transition: all .3s linear;
+    &:hover,
+    &:focus {
+        border: 1.5px solid #00BB78;
+        color: #00BB78;
+    }
     &:disabled {
         border: 1.5px solid #ddd;
         color: #ddd;
@@ -72,14 +81,60 @@ body {
     line-height: 138%;
     text-transform: uppercase;
     color: #0E0E0F;
+    &:hover {
+        color: #009B63;
+    }
+}
+.nav-item {
+    &_spec {
+        position: relative;
+        padding-left: 20px;
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            top: 0;
+            left: 0;
+            width: 14px;
+            height: 100%;
+            background: url(../images/dest/star.svg) center/ contain no-repeat;
+        }
+    }
 }
 .nav-item.active {
     & .nav-link {
         color: #00A76B;
     }
 }
-
-.slider {
+.main {
+    &__intro {
+        position: relative;
+    }
+}
+.intro {
+    &__main-title-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 15;
+        display: flex;
+        align-items: center;
+        pointer-events: none;
+    }
+}
+.main-title {
+    font-weight: 600;
+    // font-size: 64px;
+    font-size: 30px;
+    line-height: 136%;
+    color: #0E0E0F;
+    &_col {
+        color: #00A76B;
+    }
+}
+.swiper {
     &__img {
         width: 100%;
     }
@@ -134,9 +189,13 @@ body {
         color: #FFFFFF;
     }
     &__dropdown-content {
-        display: none;
+        // display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .3s linear;
         &_active {
-            display: block;
+            // display: block;
+            max-height: 1000px;
         }
     }
     &__list-item {
@@ -199,9 +258,12 @@ body {
         align-items: center;
         margin-left: 10px;
     }
+    &__dropdown-arrow-img_active {
+        transform: rotate(-180deg);
+    }
 }
 .user-data-form {
-    // max-width: 255px;
+    max-width: 450px;
     position: relative;
     &__btn {
         position: absolute;
@@ -239,7 +301,6 @@ body {
     &__link {
         width: 100%;
         height: 100%;
-        cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
