@@ -59,15 +59,21 @@
 
 (function() {
     const dropdownBtns = document.querySelectorAll('.info-block__dropdown-btn'),
-        dropdownContents = document.querySelectorAll('.info-block__dropdown-content');
+        dropdownContents = document.querySelectorAll('.info-block__dropdown-content'),
+        dropdownArrows = document.querySelectorAll('.info-block__dropdown-arrow-img');
 
         for(let btn of dropdownBtns) {
             btn.addEventListener('click', function() {
                 for (let cont of dropdownContents) {
                     if(cont.dataset.target === this.dataset.open) {
-                            cont.classList.toggle('info-block__dropdown-content_active');
+                        cont.classList.toggle('info-block__dropdown-content_active');
+                        for(let arrow of dropdownArrows) {
+                            if(arrow.dataset.open === this.dataset.open) {
+                                arrow.classList.toggle('info-block__dropdown-arrow-img_active');
+                            }
                         }
                     }
-                })
+                }
+            })
         }
 })();

@@ -1,8 +1,14 @@
+@media screen and (min-width: 425px) {
+    .main-title {
+        font-size: 40px;
+    }
+}
+
 @media screen and (min-width: 576px) {
     .container {
         width: 95%;
     }
-    .slider {
+    .swiper {
         &__img_576 {
             display: block;
         }
@@ -25,6 +31,31 @@
         &__card-item {
             width: 45%;
         }
+    }
+    .footer {
+        &__col {
+            display: flex;
+            justify-content: flex-start;
+            gap: 3em;
+        }
+        &__info-block {
+            flex-grow: 1;
+        }
+    }
+    .info-block {
+        &__dropdown-arrow {
+            display: none;
+        }
+        &__dropdown-btn {
+            cursor: auto;
+        }
+        &__dropdown-content {
+            // display: block;
+            max-height: 1000px;
+        }
+    }
+    .main-title {
+        font-size: 46px;
     }
 }
 
@@ -59,6 +90,24 @@
             padding: 30px 0;
         }
     }
+    .main-title {
+        font-size: 54px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .footer {
+        &__body {
+            display: flex;
+            justify-content: space-between;
+            gap: 2em;
+        }
+        &__col {
+            flex-grow: 1;
+        }
+    }
+    .main-title {
+        font-size: 64px;
+    }
 }
 
 @media screen and (min-width: 1400px) {
@@ -67,4 +116,5 @@
             width: 30%;
         }
     }
+    
 }
